@@ -1,0 +1,258 @@
+html,
+body,
+#app {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  font-family: monospace;
+  font-size: 1rem;
+}
+#app {
+  overflow: hidden;
+}
+input[type="file"] {
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  opacity: 0;
+}
+.button {
+  background: #bbb;
+  color: #333;
+  border-radius: 0.5rem;
+  padding: 1rem;
+}
+#app {
+  flex-direction: row;
+}
+.file {
+  display: flex;
+  flex-direction: row;
+}
+.drag {
+  background: #333;
+  color: #bbb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.drag .open-file {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16rem 2rem;
+  border: 2px dashed #bbb;
+  border-radius: 1rem;
+}
+.drag .open-file label.open-file-label {
+  font-size: 2rem;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+.file,
+.drag,
+.offsets,
+.values,
+.interpreter {
+  width: 100%;
+  height: 100%;
+}
+.offsets {
+  background: #222;
+  color: #aaa;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: auto;
+}
+.offsets .offset {
+  margin-bottom: 0.125rem;
+  padding: 0 1rem;
+}
+.offsets .offset.active {
+  background: #224;
+  color: #bbf;
+}
+.lines.hex {
+  background: #333;
+  color: #bbb;
+  display: flex;
+  flex-direction: column;
+}
+.lines.hex .line {
+  margin-bottom: 0.125rem;
+  display: flex;
+  flex-direction: row;
+  padding: 0 1rem;
+}
+.lines.hex .line.active {
+  background: #336;
+  color: #bbf;
+}
+.lines.hex .line .value {
+  margin: 0 0.5rem;
+}
+.lines.hex .line .value.active {
+  background: #bbf;
+  color: #336;
+}
+.lines.ascii {
+  background: #373737;
+  color: #bbb;
+  display: flex;
+  flex-direction: column;
+}
+.lines.ascii .line {
+  margin-bottom: 0.125rem;
+  display: flex;
+  flex-direction: row;
+  padding: 0 1rem;
+}
+.lines.ascii .line.active {
+  background: #373766;
+  color: #bbf;
+}
+.lines.ascii .line .value.active {
+  background: #fbf;
+  color: #373766;
+}
+.interpreter {
+  overflow-y: auto;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  background: #444;
+  color: #bbb;
+}
+.interpreter form {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+.interpreter form .settings-row {
+  display: flex;
+  flex-direction: row;
+}
+.interpreter form .setting {
+  display: flex;
+  flex: 1 1 auto;
+  max-width: 12rem;
+}
+.interpreter form legend {
+  padding: 0 1rem;
+}
+.interpreter form fieldset {
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+.interpreter form .group {
+  display: flex;
+}
+.interpreter table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.interpreter table tr:nth-child(2n+0) td {
+  padding-top: 1rem;
+}
+.interpreter table tr:nth-child(2n+1) td {
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #bbb;
+}
+.interpreter table tr th {
+  border-bottom: 1px solid #bbb;
+  padding-bottom: 0.5rem;
+}
+.interpreter table tr td,
+.interpreter table tr th {
+  text-align: left;
+  padding-right: 1rem;
+}
+.interpreter table tr td:last-child,
+.interpreter table tr th:last-child {
+  padding-right: 0;
+}
+.interpreter table tr td:first-child,
+.interpreter table tr th:first-child {
+  text-align: right;
+}
+.interpreter .u8 .type,
+.interpreter .i8 .type {
+  color: #c66;
+}
+.interpreter .u8 .value,
+.interpreter .i8 .value {
+  color: #df9f9f;
+}
+.interpreter .u16le .type,
+.interpreter .i16le .type {
+  color: #c96;
+}
+.interpreter .u16le .value,
+.interpreter .i16le .value {
+  color: #dfbf9f;
+}
+.interpreter .u16be .type,
+.interpreter .i16be .type {
+  color: #cc6;
+}
+.interpreter .u16be .value,
+.interpreter .i16be .value {
+  color: #dfdf9f;
+}
+.interpreter .u32le .type,
+.interpreter .i32le .type {
+  color: #9c6;
+}
+.interpreter .u32le .value,
+.interpreter .i32le .value {
+  color: #bfdf9f;
+}
+.interpreter .u32be .type,
+.interpreter .i32be .type {
+  color: #6c6;
+}
+.interpreter .u32be .value,
+.interpreter .i32be .value {
+  color: #9fdf9f;
+}
+.interpreter .f32le .type,
+.interpreter .f32be .type {
+  color: #6c9;
+}
+.interpreter .f32le .value,
+.interpreter .f32be .value {
+  color: #9fdfbf;
+}
+.interpreter .f64le .type,
+.interpreter .f64be .type {
+  color: #6cc;
+}
+.interpreter .f64le .value,
+.interpreter .f64be .value {
+  color: #9fdfdf;
+}
+.interpreter .tu32le .type,
+.interpreter .tu32be .type {
+  color: #69c;
+}
+.interpreter .tu32le .value,
+.interpreter .tu32be .value {
+  color: #9fbfdf;
+}
+.interpreter .tf32le .type,
+.interpreter .tf32be .type {
+  color: #7070c2;
+}
+.interpreter .tf32le .value,
+.interpreter .tf32be .value {
+  color: #a6a6d9;
+}
+.interpreter .tf64le .type,
+.interpreter .tf64be .type {
+  color: #9970c2;
+}
+.interpreter .tf64le .value,
+.interpreter .tf64be .value {
+  color: #bfa6d9;
+}
